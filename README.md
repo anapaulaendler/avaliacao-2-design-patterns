@@ -27,7 +27,7 @@ Sua empresa está integrando com um legado bancário que possui uma interface co
 
 ### Problema:
 - Converter a interface atualizada ProcessadorTransacoes (com métodos `autorizar(String cartao, double valor, String moeda)`) para a interface legada
-- O sistema legado usa: processarTransacao(`HashMap<String, Object>` parametros)
+- O sistema legado usa: `processarTransacao(HashMap<String, Object> parametros)`
 - Implemente de forma que o funcionamento seja bidirecional, ou seja, que também permita converter respostas do legado para o formato atualizado
 - Adicione tratamento para campos obrigatórios do legado que não existem na interface moderna (ao menos um)
 
