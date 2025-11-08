@@ -14,7 +14,9 @@ Você está desenvolvendo um sistema de processamento de dados para uma empresa 
 - Implemente pelo menos 3 algoritmos diferentes com cálculos dummy (podem ser mensagens de texto) distintos
 
 ## Justificativa do Padrão
-Decidi aplicar o padrão de projeto **Strategy**, (...).
+Decidi aplicar o padrão de projeto **Strategy**, já que a questão exige que o cliente possa mudar de algoritmo utilizado para o cálculo de riscos sem conhecer detalhes da sua implementação e ele deve ser **intercambiável** durante a execução. 
+
+O padrão Strategy se mostrou ideal na situação por conseguir entregar o requisitado e possibilitar que, usando um `ModeloRisco`, o cliente consiga analisar o seu (`ModeloRisco`) risco utilizando diversos algoritmos por meio que um `Contexto`, o qual permite a troca dinâmica de algoritmos.
 
 ## Diagrama UML
 ![]()
@@ -35,7 +37,9 @@ Sua empresa está integrando com um legado bancário que possui uma interface co
 - O legado exige codificação específica para moedas (USD=1, EUR=2, BRL=3)
 
 ## Justificativa do Padrão
-Decidi aplicar o padrão de projeto **Adapter**, (...).
+Decidi aplicar o padrão de projeto **Adapter** porque estamos lidando com um sistema legado (`SistemaBancarioLegado`), cujas respostas precisam ser adaptadas para uma interface moderna.
+
+O Adapter funciona tomando o sistema legado como parâmetro e literalmente adaptando as respostas desse sistema para um atualizando, fazendo as devidas alterações para que os sistemas consigam interagir entre si sem quebrar.
 
 ## Diagrama UML
 ![]()
