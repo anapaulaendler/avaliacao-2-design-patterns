@@ -2,7 +2,7 @@ package Questao1.algoritmos;
 
 public class ValueAtRisk extends Algoritmo {
 
-    public ValueAtRisk(String nomeAlgoritmo) {
+    public ValueAtRisk() {
             super("VaT");
         }
     
