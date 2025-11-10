@@ -18,6 +18,8 @@ public class ValidadorSchema extends ValidadorBase {
 
         if (!ok) {
             falhas++;
+            // Seguindo o requisito: "A cadeia deve suportar validações condicionais (se validador X falhar, pule Y)"
+            this.setProximo(new ValidadorRegrasFiscais());
             // Inicialmente, a ideia era fazer rollback em todos, mas considerando a questão,
             // esse rollback deve acontecer em 3 momentos: nos validadores 3 e 5 se tiver qualquer
             // tipo de falha + no banco de dados!
