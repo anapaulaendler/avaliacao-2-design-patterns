@@ -63,12 +63,13 @@ Você está modelando um sistema de controle para uma usina nuclear com estados 
 - ALERTA_VERMELHO → EMERGENCIA: se sistema de resfriamento falhar
 
 ## Justificativa do Padrão
-Decidi aplicar o padrão de projeto **State**, (...).
+Decidi aplicar o padrão de projeto **State**, porque organiza os comportamentos de um objeto conforme seu estado atual. Além disso, evita condicionais complexos e facilita a manutenção de transições.
+Dessa forma, elimino grandes blocos de switch/if na classe `UsinaNuclear`, e consigo trazer as restrições lógicas para transições de estado propostas para o sistema, como "O estado EMERGENCIA só pode ser ativado após passar por ALERTA_VERMELHO" 
 
 ## Diagrama UML
 ![]()
 
-# Questão 4 - Sistema de Relatórios de Pedidos
+# Questão 4 - Sistema de Validação de Documentos
 
 ## Descrição
 ### Contexto
@@ -93,7 +94,8 @@ Desenvolva um sistema de validação de documentos fiscais eletrônicos (NF-e) q
 - Implemente timeout individual para cada validador
 
 ## Justificativa do Padrão
-Decidi aplicar o padrão de projeto **Chain of Responsibility**, (...).
+Decidi aplicar o padrão de projeto **Chain of Responsibility**, porque distribui a responsabilidade entre vários objetos de forma sequencial. Além disso, evita código com muitos if/else encadeados.
+Dessa forma, consigo dividir de forma adequada as validações por tipo, seguindo o princípio da Responsabilidade Única (SRP) do SOLID, e, por conta disso, agilizar operações de rollback por meio do conhecimento indivual de cada tipo de validação. 
 
 ## Diagrama UML
 ![]()
